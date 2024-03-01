@@ -110,11 +110,10 @@ void printTree(TreeNodePtr treePtr, int l){
    int i;
    if(treePtr!=NULL){
       printTree( treePtr->rightPtr,l+1);//Take cursor to the furthest right
-      for(i=1;i<l;i++) {
-         printf("      ");
+      for(i=0;i<l;i++) {
+         printf("   ");
       }//make the blank
       printf("%3d\n",treePtr->data);  //print the value
-      l--;
-      printTree( treePtr->leftPtr,++l);
+      printTree( treePtr->leftPtr,l+1);
      }
 }
