@@ -109,7 +109,7 @@ void postOrder( TreeNodePtr treePtr )
 void printTree(TreeNodePtr treePtr, int l){
    int i;
    if(treePtr!=NULL){
-      printTree( treePtr->rightPtr,++l);//Take cursor to the furthest right
+      printTree( treePtr->rightPtr,l+1);//Take cursor to the furthest right
       for(i=1;i<l;i++) {
          printf("      ");
       }//make the blank
